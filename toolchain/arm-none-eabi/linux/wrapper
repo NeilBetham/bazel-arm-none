@@ -1,0 +1,7 @@
+#!/bin/bash
+set -euo pipefail
+
+NAME=$(basename "$0")
+TOOLCHAIN_BINDIR=external/arm-none-eabi-linux/gcc-arm-none/bin
+
+exec "${TOOLCHAIN_BINDIR}"/"${NAME}" "$@"
