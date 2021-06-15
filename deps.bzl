@@ -9,7 +9,7 @@ def toolchain_deps():
     build_file = "@bazel_arm_none//toolchain:tools.BUILD",
     patch_cmds = ["mv gcc-arm-none* gcc-arm-none"],
   )
-  register_toolchains(
+  native.register_toolchains(
     "@bazel_arm_none//toolchain:linux_x86_64",
   )
 
