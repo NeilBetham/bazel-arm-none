@@ -1,9 +1,9 @@
 def gdb_bin():
   """ Copies the toolchain gdb into the bazel-bin dir """
-#  native.genrule(
-#    name = "gdb-bin",
-#    outs = ["gdb"],
-#    cmd = "cp $(location @arm-none-eabi-linux//:gcc-arm-none/bin/arm-none-eabi-gdb) $@",
-#    tools = ["@arm-none-eabi-linux//:gcc-arm-none/bin/arm-none-eabi-gdb"],
-#    executable = True,
-#  )
+  native.genrule(
+    name = "gdb-bin",
+    outs = ["gdb"],
+    cmd = "cp $(location @bazel_arm_none//:gdb) $@",
+    tools = ["@bazel_arm_none//:gdb"],
+    executable = True,
+  )

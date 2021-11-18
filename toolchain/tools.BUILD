@@ -57,6 +57,12 @@ filegroup(
     srcs = glob(["gcc-arm-none/bin/arm-none-eabi-size*"]),
 )
 
+# gdb executables.
+filegroup(
+    name = "gdb",
+    srcs = glob(["gcc-arm-none/bin/arm-none-eabi-gdb*"]),
+)
+
 # libraries and headers.
 filegroup(
     name = "compiler_pieces",

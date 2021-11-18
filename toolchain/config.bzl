@@ -16,6 +16,7 @@ def _impl(ctx):
         wrapper_path(ctx, "nm"),
         wrapper_path(ctx, "objdump"),
         wrapper_path(ctx, "strip"),
+        wrapper_path(ctx, "gdb"),
     ]
 
     compiler_flags = [
