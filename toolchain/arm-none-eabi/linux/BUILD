@@ -68,7 +68,7 @@ filegroup(
 cc_arm_none_eabi_config(
   name = "linux_config",
   gcc_repo = "arm-none-eabi-linux/gcc-arm-none",
-  gcc_version = "10.2.1",
+  gcc_version = "10.3.1",
   host_system_name = "linux_x86_64",
   toolchain_identifier = "arm-none-eabi-linux",
   wrapper_path = "arm-none-eabi/linux",
