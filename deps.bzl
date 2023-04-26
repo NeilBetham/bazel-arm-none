@@ -4,18 +4,18 @@ def toolchain_deps():
   # Linux ARM Toolchain
   http_archive(
     name = "arm-none-eabi-linux",
-    urls = ["https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2"],
-    sha256 = "97dbb4f019ad1650b732faffcc881689cedc14e2b7ee863d390e0a41ef16c9a3",
+    urls = ["https://developer.arm.com/-/media/Files/downloads/gnu/12.2.mpacbti-rel1/binrel/arm-gnu-toolchain-12.2.mpacbti-rel1-x86_64-arm-none-eabi.tar.xz"],
+    sha256 = "17455a06c816031cc2c66243c117cba48463cd6a3a3fdfac7275b4e9c40eb314",
     build_file = "@bazel_arm_none//toolchain:tools.BUILD",
-    patch_cmds = ["mv gcc-arm-none* gcc-arm-none"],
+    patch_cmds = ["mv arm-gnu-toolchain* gcc-arm-none"],
   )
 
   http_archive(
     name = "arm-none-eabi-macos",
-    urls = ["https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-mac.tar.bz2"],
-    sha256 = "fb613dacb25149f140f73fe9ff6c380bb43328e6bf813473986e9127e2bc283b",
+    urls = ["https://developer.arm.com/-/media/Files/downloads/gnu/12.2.mpacbti-rel1/binrel/arm-gnu-toolchain-12.2.mpacbti-rel1-darwin-x86_64-arm-none-eabi.tar.xz"],
+    sha256 = "febcb19108a400576a7cfa312b46c2393b78ab41cfcc450d219e9485b0d8e375",
     build_file = "@bazel_arm_none//toolchain:tools.BUILD",
-    patch_cmds = ["mv gcc-arm-none* gcc-arm-none"],
+    patch_cmds = ["mv arm-gnu-toolchain* gcc-arm-none"],
   )
 
   native.register_toolchains(

@@ -69,6 +69,7 @@ filegroup(
     srcs = glob([
         "gcc-arm-none/arm-none-eabi/**",
         "gcc-arm-none/lib/gcc/**",
+        "gcc-arm-none/libexec/gcc/**",
     ]),
 )
 
