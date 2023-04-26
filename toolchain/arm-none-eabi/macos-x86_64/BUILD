@@ -3,7 +3,7 @@ load("@bazel_arm_none//toolchain:config.bzl", "cc_arm_none_eabi_config")
 
 package(default_visibility = ["//visibility:public"])
 
-compiler = "arm-none-eabi-macos"
+compiler = "arm-none-eabi-macos-x86_64"
 
 filegroup(
   name = "all_files",
@@ -66,16 +66,16 @@ filegroup(
 )
 
 cc_arm_none_eabi_config(
-  name = "macos_config",
-  gcc_repo = "arm-none-eabi-macos/gcc-arm-none",
+  name = "macos_x86_64_config",
+  gcc_repo = "arm-none-eabi-macos-x86_64/gcc-arm-none",
   gcc_version = "12.2.1",
   host_system_name = "darwin",
-  toolchain_identifier = "arm-none-eabi-macos",
+  toolchain_identifier = "arm-none-eabi-macos-x86_64",
   wrapper_path = "arm-none-eabi/macos",
 )
 
 cc_toolchain(
-  name = "macos",
+  name = "macos-x86_64",
   all_files = ":all_files",
   ar_files = ":ar_files",
   compiler_files = ":compiler_files",
@@ -84,6 +84,6 @@ cc_toolchain(
   objcopy_files = ":objcopy_files",
   strip_files = ":strip_files",
   supports_param_files = 0,
-  toolchain_config = ":macos_config",
-  toolchain_identifier = "arm-none-eabi-macos",
+  toolchain_config = ":macos_x86_64_config",
+  toolchain_identifier = "arm-none-eabi-macos-x86_64",
 )

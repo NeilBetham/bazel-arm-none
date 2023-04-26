@@ -2,6 +2,6 @@
 set -euo pipefail
 
 NAME=$(basename "$0")
-TOOLCHAIN_BINDIR=external/arm-none-eabi-macos/gcc-arm-none/bin
+TOOLCHAIN_BINDIR=external/arm-none-eabi-macos-x86_64/gcc-arm-none/bin
 
 exec "${TOOLCHAIN_BINDIR}"/"${NAME}" "$@"
