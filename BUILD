@@ -28,7 +28,7 @@ filegroup(
   name = "gdb",
   srcs = select({
     "linux": ["@arm-none-eabi-linux//:gcc-arm-none/bin/arm-none-eabi-gdb"],
-    "darwin-x86_64": ["@arm-none-eabi-macos-x64_64//:gcc-arm-none/bin/arm-none-eabi-gdb"],
+    "darwin-x86_64": ["@arm-none-eabi-macos-x86_64//:gcc-arm-none/bin/arm-none-eabi-gdb"],
     "darwin-arm64": ["@arm-none-eabi-macos-arm64//:gcc-arm-none/bin/arm-none-eabi-gdb"],
   }),
 )
