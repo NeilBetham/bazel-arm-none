@@ -68,7 +68,7 @@ filegroup(
 cc_arm_none_eabi_config(
   name = "macos_arm64_config",
   gcc_repo = "arm-none-eabi-macos-arm64/gcc-arm-none",
-  gcc_version = "12.2.1",
+  gcc_version = "13.3.1",
   host_system_name = "darwin",
   toolchain_identifier = "arm-none-eabi-macos-arm64",
   wrapper_path = "arm-none-eabi/macos",
